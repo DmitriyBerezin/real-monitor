@@ -53,7 +53,7 @@ class CianCache {
 			this.flats = this.flats.concat(newFlats);
 
 			const newFlatsStr = newFlats.join('\r\n');
-			const newPart = `${DELIMETER}\r\n${newFlatsStr}`;
+			const newPart = `\r\n${DELIMETER}\r\n${newFlatsStr}`;
 			fs.appendFile(FILE_PATH, newPart, (err) => {
 				if (err) {
 					throw err;
